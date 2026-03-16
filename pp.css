@@ -1,0 +1,135 @@
+:root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #6c63ff;
+    --shadow: 0 6px 22px rgba(15, 23, 42, 0.08);
+    font-family: "Poppins", system-ui, Arial, sans-serif;
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff758c, #42e695);
+    background-size: 400% 400%;
+    animation: gradientFlow 12s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #0f172a;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 960px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 20px;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+/* === Textarea Styling === */
+
+textarea {
+    width: 100%;
+    min-height: 180px;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #222;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.15);
+    outline: none;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 12px rgba(108, 99, 255, 0.7);
+}
+
+
+/* === Buttons === */
+
+.btn {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(106, 17, 203, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 117, 252, 0.5);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.6);
+    color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+}
+
+
+.panel {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.preset {
+    background: linear-gradient(135deg, #42e695, #3bb2b8);
+    color: white;
+    border-radius: 8px;
+    padding: 6px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preset:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(66, 230, 149, 0.7);
+}
